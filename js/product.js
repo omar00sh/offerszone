@@ -29,35 +29,51 @@ if(product.images.length <= 1){
 
 product.images.forEach((image,index)=>{
 
-const link = document.createElement("a");
-link.href = image;
-link.dataset.pswpWidth = "1200";
-link.dataset.pswpHeight = "1200";
-
 const thumb = document.createElement("img");
+
 thumb.src = image;
 
 if(index===0){
     thumb.classList.add("active");
 }
 
-thumb.onclick=()=>{
+thumb.onclick = () => {
 
-mainImage.src=image;
+    currentIndex = index;
 
-document.querySelectorAll(".gallery-strip img")
-.forEach(img=>img.classList.remove("active"));
+    mainImage.src = image;
 
-thumb.classList.add("active");
+    document.querySelectorAll(".gallery-strip img")
+    .forEach(img => img.classList.remove("active"));
+
+    thumb.classList.add("active");
 
 };
 
-link.appendChild(thumb);
-
-gallery.appendChild(link);
-
+gallery.appendChild(thumb);
 });
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
 
+mainImage.onclick = () => {
+    lightbox.style.display = "flex";
+    lightboxImage.src = currentImages[currentIndex];
+};
+
+document.getElementById("close-lightbox").onclick = () => {
+    lightbox.style.display = "none";
+};
+
+document.getElementById("next-image").onclick = () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    lightboxImage.src = currentImages[currentIndex];
+};
+
+document.getElementById("prev-image").onclick = () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    lightboxImage.src = currentImages[currentIndex];
+};
+    
 document.getElementById("product-title").textContent=product.title;
 
 if(product.price){

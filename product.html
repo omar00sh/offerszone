@@ -2,27 +2,31 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تفاصيل المنتج | OffersZone</title>
 
-    <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
-    
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تفاصيل المنتج | OffersZone</title>
+
+<link rel="stylesheet" href="css/main.css">
+
 </head>
-    
+
 <body>
 
-    <div id="lightbox" class="lightbox">
-    <span id="close-lightbox">&times;</span>
+<div id="lightbox" class="lightbox">
 
-    <button id="prev-image">❮</button>
+<span id="close-lightbox">&times;</span>
 
-    <img id="lightbox-image">
+<button id="prev-image">❮</button>
 
-    <button id="next-image">❯</button>
+<img id="lightbox-image" alt="">
+
+<button id="next-image">❯</button>
+
 </div>
-    
+
 <header>
 
 <div class="container">
@@ -41,29 +45,82 @@
 
 <div class="gallery">
 
-    <img id="product-image" class="main-image" src="" alt="">
+<img id="product-image"
+class="main-image"
+src=""
+alt="">
 
-    <div id="gallery" class="gallery-strip"></div>
+<div
+id="gallery"
+class="gallery-strip">
+
+</div>
 
 </div>
 
 <h2 id="product-title"></h2>
 
-<p id="product-price"></p>
+<p
+id="product-price"
+class="price">
 
-<p id="product-old-price"></p>
+</p>
 
-<p id="product-discount"></p>
+<p
+id="product-old-price"
+class="old-price">
 
-<p id="product-rating"></p>
+</p>
 
-<p id="product-category"></p>
+<p
+id="product-discount"
+class="discount">
 
-<a id="buy-button" href="#" target="_blank">
+</p>
 
-<button>🛒 شراء الآن</button>
+<div class="info">
+
+<span id="product-rating"></span>
+
+<span id="product-category"></span>
+
+</div>
+
+<a
+id="buy-button"
+href="#"
+target="_blank">
+
+<button>
+
+🛒 شراء الآن
+
+</button>
 
 </a>
+<section id="description-box">
+
+<h3>📝 الوصف</h3>
+
+<p id="product-description"></p>
+
+</section>
+
+<section id="pros-box">
+
+<h3>✅ المميزات</h3>
+
+<ul id="product-pros"></ul>
+
+</section>
+
+<section id="cons-box">
+
+<h3>❌ العيوب</h3>
+
+<ul id="product-cons"></ul>
+
+</section>
 
 </div>
 
@@ -71,7 +128,6 @@
 
 <script src="js/product.js"></script>
 
-    
 </body>
 
 </html>

@@ -30,7 +30,9 @@ ${product.category ? `<p class="category">📂 ${product.category}</p>` : ""}
 
 ${product.buy_url ? `<button onclick="window.open('${product.buy_url}','_blank')">🛒 شراء الآن</button>` : ""}
 
-<button>📄 عرض التفاصيل</button>
+<a href="product.html?id=${product.id}">
+    <button>📄 عرض التفاصيل</button>
+</a>
 
 </div>
 

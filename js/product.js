@@ -9,6 +9,8 @@ fetch("data/products.json")
 
 const product = products.find(item => item.id === id);
 
+    currentImages = product.images;
+    
 if (!product) {
     document.body.innerHTML = "<h2>المنتج غير موجود</h2>";
     return;

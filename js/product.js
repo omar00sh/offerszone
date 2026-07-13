@@ -25,12 +25,16 @@ if(product.images.length <= 1){
 
 product.images.forEach((image,index)=>{
 
-const thumb=document.createElement("img");
+const link = document.createElement("a");
+link.href = image;
+link.dataset.pswpWidth = "1200";
+link.dataset.pswpHeight = "1200";
 
-thumb.src=image;
+const thumb = document.createElement("img");
+thumb.src = image;
 
 if(index===0){
-thumb.classList.add("active");
+    thumb.classList.add("active");
 }
 
 thumb.onclick=()=>{
@@ -44,7 +48,9 @@ thumb.classList.add("active");
 
 };
 
-gallery.appendChild(thumb);
+link.appendChild(thumb);
+
+gallery.appendChild(link);
 
 });
 

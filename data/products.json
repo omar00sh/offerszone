@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "title": "شاحن Anker Nano 30W",
+    "image": "https://via.placeholder.com/300x300?text=Product",
+    "store": "amazon",
+    "buy_url": "#",
+    "price": "79 ريال",
+    "old_price": "129 ريال",
+    "discount": "39%",
+    "rating": "4.8",
+    "category": "شواحن"
+  },
+  {
+    "id": 2,
+    "title": "سماعة لاسلكية",
+    "image": "https://via.placeholder.com/300x300?text=Headphones",
+    "store": "aliexpress",
+    "buy_url": "#"
+  }
+]

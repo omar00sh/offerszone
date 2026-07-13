@@ -94,3 +94,46 @@ color:#fff;
 .buttons button:last-child{
 background:#eee;
 }
+.gallery{
+margin-bottom:25px;
+}
+
+.main-image{
+width:100%;
+border-radius:12px;
+background:#fff;
+padding:10px;
+object-fit:contain;
+max-height:420px;
+}
+
+.gallery-strip{
+display:flex;
+gap:10px;
+margin-top:12px;
+overflow-x:auto;
+padding-bottom:5px;
+}
+
+.gallery-strip img{
+
+width:70px;
+height:70px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+object-fit:cover;
+
+border:2px solid transparent;
+
+flex-shrink:0;
+
+}
+
+.gallery-strip img.active{
+
+border-color:#ff7a00;
+
+}

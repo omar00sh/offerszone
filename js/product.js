@@ -1,5 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
+let currentImages = [];
+let currentIndex = 0;
 
 fetch("data/products.json")
 .then(response => response.json())

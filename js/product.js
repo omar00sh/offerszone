@@ -7,16 +7,48 @@ fetch("data/products.json")
 
 const product = products.find(item => item.id === id);
 
-if(!product){
-document.body.innerHTML="<h2>المنتج غير موجود</h2>";
-return;
+if (!product) {
+    document.body.innerHTML = "<h2>المنتج غير موجود</h2>";
+    return;
 }
 
 document.title = product.title + " | OffersZone";
 
-document.getElementById("product-image").src = product.image;
+const mainImage = document.getElementById("product-image");
+const gallery = document.getElementById("gallery");
 
-document.getElementById("product-title").textContent = product.title;
+mainImage.src = product.images[0];
+
+if(product.images.length <= 1){
+    gallery.style.display = "none";
+}
+
+product.images.forEach((image,index)=>{
+
+const thumb=document.createElement("img");
+
+thumb.src=image;
+
+if(index===0){
+thumb.classList.add("active");
+}
+
+thumb.onclick=()=>{
+
+mainImage.src=image;
+
+document.querySelectorAll(".gallery-strip img")
+.forEach(img=>img.classList.remove("active"));
+
+thumb.classList.add("active");
+
+};
+
+gallery.appendChild(thumb);
+
+});
+
+document.getElementById("product-title").textContent=product.title;
 
 if(product.price){
 document.getElementById("product-price").textContent="💰 "+product.price;
